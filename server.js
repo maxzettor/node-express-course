@@ -7,11 +7,11 @@ const app = express();
  {name:'Edvil'}
 ]
 
-app.get('/users',function(req,res){
+app.get('/users/:id',function(req,res){
 		res.json({
 			sucess: true,
 			message: 'sucessfully got users. Super!',
-			users: mockUserData
+			users: req.params.id
 		})
 })
 
